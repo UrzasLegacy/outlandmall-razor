@@ -170,7 +170,8 @@ while not dead
             endif
 
             for 5
-                if not hidden
+                if not hidden or insysmsg "You must be a friend of this house, or have a rental vendor, in order to hide here."
+                    clearsysmsg
                     skill 'hiding'
                     wait 11000
                 else
